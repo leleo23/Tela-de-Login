@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Go Beleza</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Login.css">
+
+</head>
+<body>
+    <header>
+        <h1>Gobeleza</h1>
+    </header>
+
+    <div class="telalogin">
+        <div class="image">
+            <img src="https://img.freepik.com/free-vector/emails-concept-illustration_114360-1355.jpg?w=740&t=st=1687192147~exp=1687192747~hmac=3a1bd39c10b33afd2ddc60d596e8714c3290874e99f972b0a71d553ef87f353c" alt="image">
+        </div>
+        <div class="form" id="loginForm">
+            <form>
+                <h3 class="titulo">Recuperar Senha</h3>
+                <label for="email">Insira seu Email</label>
+                <input type="email" id="email" placeholder="gobeleza@gmail.com" required>
+                <div class="divbtn">
+                    <button class="btn" type="submit">Redefinir Senha</button>
+                </div>
+                <div class="divlinks">
+                    <a href="Login.html">Voltar para a página inicial</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+
+            if (tabName === 'cadastro') {
+                document.getElementById('loginForm').style.display = "none"; // Oculta o formulário de login ao abrir a guia de cadastro
+            } else if (tabName === 'login') {
+                document.getElementById('loginForm').style.display = "block"; // Exibe o formulário de login ao abrir a guia de login
+            }
+        }
+    </script>
+</body>
+</html>

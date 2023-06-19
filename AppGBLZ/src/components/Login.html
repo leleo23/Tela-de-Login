@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Site</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <h1>Gobeleza</h1>
+    </header>
+
+    <div class="telalogin">
+        <div class="image">
+            <img src="https://img.freepik.com/vetores-gratis/ilustracao-do-conceito-de-campanha-de-comercio-eletronico_114360-8232.jpg?size=626&ext=jpg" alt="image">
+        </div>
+        <div class="form" id="loginForm">
+            <form>
+                <h3 class="titulo">Entre na sua Conta</h3>
+                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="password">Senha</label>
+                <input type="password" id="password"  required>
+                <a class="esqueci" href="recuperarSenha.html">Esqueci minha senha</a>
+                <div class="divbtn">
+                    <button class="btn" type="submit">Acessar</button>
+                </div>
+                <div class="divlinks">
+                    <span>Ainda não tem uma conta?</span>
+                    <a class="entra" href="#" onclick="openTab('cadastro')">Criar conta</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="form tabcontent" id="cadastro">
+            <form>
+                <h3 class="titulo">Crie sua Conta</h3>
+                <div class="formCad">
+                    <label for="nomeCompleto">Nome Completo</label>
+                    <input type="" id="nomeCompleto" required>
+                    <label for="newEmail">Email</label>
+                    <input type="email" id="newEmail" required>
+                    <label for="newPassword">Senha</label>
+                    <input type="password" id="newPassword" required>
+                </div>
+                <div class="btnCadastro">
+                    <button class="btn" type="submit">Cadastrar</button>
+                </div>
+                <div class="divEntrar">
+                    <span>Já possui conta? </span>
+                    <a class="entra" href="#" onclick="openTab('loginForm')">Entrar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+
+            if (tabName === 'cadastro') {
+                document.getElementById('loginForm').style.display = "none"; // Oculta o formulário de login ao abrir a guia de cadastro
+            } else if (tabName === 'login') {
+                document.getElementById('loginForm').style.display = "block"; // Exibe o formulário de login ao abrir a guia de login
+            }
+        }
+    </script>
+</body>
+</html>
